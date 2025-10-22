@@ -20,9 +20,11 @@
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 100%;
+            margin: 0;
+            padding: 10px;
+            width: 100vw;
+            min-height: 100vh;
         }
         
         .header {
@@ -41,26 +43,33 @@
         
         .main-content {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 15px;
+            flex-wrap: nowrap;
+            height: calc(100vh - 120px);
         }
         
         .sidebar {
-            width: 300px;
+            width: 280px;
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            height: fit-content;
+            height: 100%;
+            overflow-y: auto;
+            flex-shrink: 0;
         }
         
         .content {
             flex: 1;
-            min-width: 600px;
+            min-width: 0;
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
         }
         
         .section-title {
@@ -211,7 +220,7 @@
         
         .chart {
             width: 100%;
-            height: 400px;
+            height: 500px;
             border-radius: 8px;
         }
         
@@ -263,17 +272,39 @@
             margin: 15px 0;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .main-content {
                 flex-direction: column;
+                height: auto;
             }
             
             .sidebar {
                 width: 100%;
+                height: auto;
             }
             
             .content {
                 min-width: auto;
+                height: auto;
+            }
+            
+            .chart {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 5px;
+            }
+            
+            .header {
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .chart {
+                height: 350px;
             }
         }
     </style>
@@ -391,7 +422,7 @@ python src/eeg_analysis.py
                                 </div>
                             </div>
                             
-                            <div id="pythonResultsFrame" style="width: 100%; height: 600px; border: 2px solid #2E86AB; border-radius: 10px; overflow: hidden;">
+                            <div id="pythonResultsFrame" style="width: 100%; height: calc(100vh - 300px); border: 2px solid #2E86AB; border-radius: 10px; overflow: hidden;">
                                 <iframe 
                                     src="sEEG_analysis.html" 
                                     width="100%" 
@@ -778,7 +809,8 @@ python src/eeg_analysis.py
                 title: `Señal EEG Original - ${currentData.filename}`,
                 xaxis: { title: 'Tiempo (s)' },
                 yaxis: { title: 'Amplitud' },
-                height: 400
+                height: 500,
+                margin: { l: 60, r: 30, t: 50, b: 50 }
             };
             
             Plotly.newPlot('chart1', [trace], layout);
@@ -804,7 +836,8 @@ python src/eeg_analysis.py
                 title: `Descomposición Wavelet - ${analysisResults.wavelet}`,
                 xaxis: { title: 'Tiempo (s)' },
                 yaxis: { title: 'Amplitud' },
-                height: 400
+                height: 500,
+                margin: { l: 60, r: 30, t: 50, b: 50 }
             };
             
             Plotly.newPlot('chart2', traces, layout);
@@ -826,7 +859,8 @@ python src/eeg_analysis.py
                 title: 'Frecuencias Centrales por Nivel',
                 xaxis: { title: 'Nivel de Descomposición' },
                 yaxis: { title: 'Frecuencia Central (Hz)' },
-                height: 400
+                height: 500,
+                margin: { l: 60, r: 30, t: 50, b: 50 }
             };
             
             Plotly.newPlot('chart3', [trace], layout);
@@ -847,7 +881,8 @@ python src/eeg_analysis.py
                 title: 'Densidad Espectral de Potencia - Método Welch',
                 xaxis: { title: 'Frecuencia (Hz)' },
                 yaxis: { title: 'PSD' },
-                height: 400
+                height: 500,
+                margin: { l: 60, r: 30, t: 50, b: 50 }
             };
             
             Plotly.newPlot('chart4', [trace], layout);
@@ -877,7 +912,8 @@ python src/eeg_analysis.py
                 title: 'Comparación de Métodos PSD',
                 xaxis: { title: 'Frecuencia (Hz)' },
                 yaxis: { title: 'Densidad Espectral de Potencia' },
-                height: 400
+                height: 500,
+                margin: { l: 60, r: 30, t: 50, b: 50 }
             };
             
             Plotly.newPlot('chart5', [trace1, trace2], layout);
