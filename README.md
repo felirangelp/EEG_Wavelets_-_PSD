@@ -4,10 +4,12 @@
 
 **Proyecto:** Análisis de Señales EEG - Transformada Wavelet y PSD  
 **Autor:** Felipe Rangel  
-**Institución:** Universidad Javeriana  
+**Institución:** Universidad Pontificia Javeriana  
 **Programa:** Mestría en Inteligencia Artificial  
 **Fecha:** Octubre 2025  
 **Versión:** 1.0.0  
+**Repositorio:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD.git](https://github.com/felirangelp/EEG_Wavelets_-_PSD.git)  
+**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)  
 
 ## 📋 Descripción del Proyecto
 
@@ -22,11 +24,23 @@ Este proyecto implementa el análisis de señales EEG usando **Transformada Wave
 - ✅ **Dashboard interactivo** con HTML y Plotly
 - ✅ **Documentación completa** integrada
 
-## 🚀 Inicio Rápido
+## 🌐 Acceso Web (Recomendado)
 
-### Opción 1: Dashboard HTML (Recomendado)
+### Dashboard Online - Sin Instalación Requerida
+- **URL Principal:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+- **Dashboard Directo:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html)
+
+**Ventajas del Acceso Web:**
+- ✅ **Sin instalación** requerida
+- ✅ **Acceso inmediato** desde cualquier dispositivo
+- ✅ **Siempre actualizado** con la última versión
+- ✅ **Compatible** con todos los navegadores modernos
+
+## 🚀 Inicio Rápido Local
+
+### Opción 1: Dashboard HTML Local
 ```bash
-# Abrir dashboard interactivo
+# Abrir dashboard interactivo localmente
 open dashboards/dashboard_eeg_simple.html
 ```
 
