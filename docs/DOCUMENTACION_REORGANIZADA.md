@@ -114,8 +114,8 @@ Toda la documentación del proyecto ha sido movida y organizada en la carpeta `d
 ## 🌐 URLs de Acceso
 
 ### **Dashboard Web**
-- **Principal:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
-- **Directo:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html)
+- **Principal:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
+- **Directo:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html)
 
 ### **Repositorio GitHub**
 - **Código:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD](https://github.com/felirangelp/EEG_Wavelets_-_PSD)
@@ -143,7 +143,7 @@ Toda la documentación del proyecto ha sido movida y organizada en la carpeta `d
 
 **📁 Accede a la documentación:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD/tree/main/docs](https://github.com/felirangelp/EEG_Wavelets_-_PSD/tree/main/docs)
 
-**🌐 Dashboard web:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+**🌐 Dashboard web:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 
 ---
 
@@ -151,3 +151,4 @@ Toda la documentación del proyecto ha sido movida y organizada en la carpeta `d
 **Autor:** Felipe Rangel  
 **Institución:** Universidad Pontificia Javeriana  
 **Estado:** ✅ DOCUMENTACIÓN REORGANIZADA
+

@@ -7,7 +7,7 @@
 **Institución:** Universidad Pontificia Javeriana  
 **Programa:** Mestría en Inteligencia Artificial  
 **Repositorio:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD.git](https://github.com/felirangelp/EEG_Wavelets_-_PSD.git)  
-**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 
 ## 🎯 Objetivos del Proyecto
 
@@ -212,7 +212,7 @@ ls -la *.mat
 ## 🌐 Acceso Web
 
 ### **Dashboard Online**
-- **URL:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+- **URL:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 - **Funcionalidad:** Completa, sin necesidad de instalación local
 - **Navegadores:** Chrome, Firefox, Safari, Edge
 
@@ -289,7 +289,7 @@ Mestría en Inteligencia Artificial - Universidad Pontificia Javeriana
 - **Issues:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD/issues](https://github.com/felirangelp/EEG_Wavelets_-_PSD/issues)
 
 ### **Dashboard Web**
-- **URL:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+- **URL:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 
 ---
 

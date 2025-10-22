@@ -3,7 +3,7 @@
 ## 📋 Información del Proyecto
 
 **Repositorio:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD](https://github.com/felirangelp/EEG_Wavelets_-_PSD)  
-**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)  
+**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)  
 **Autor:** Felipe Rangel - Universidad Pontificia Javeriana
 
 ## 🚀 Configuración de GitHub Pages
@@ -32,7 +32,7 @@
 ### **Paso 3: Verificar Configuración**
 
 Después de guardar, deberías ver:
-- ✅ **"Your site is live at https://felirangelp.github.io/EEG_Wavelets_-_PSD/"**
+- ✅ **"Your site is live at https://felirangelp.github.io/EEG_Wavelets_and_PSD/"**
 - ✅ Estado: **"Deployed"**
 
 ### **Paso 4: Esperar Despliegue**
@@ -45,11 +45,11 @@ Después de guardar, deberías ver:
 
 ### **URLs de Acceso**
 
-1. **Página Principal:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+1. **Página Principal:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
    - Redirige automáticamente al dashboard
    - Página de bienvenida con información del proyecto
 
-2. **Dashboard Directo:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html)
+2. **Dashboard Directo:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html)
    - Acceso directo al dashboard interactivo
    - Todas las funcionalidades disponibles
 
@@ -177,10 +177,10 @@ git ls-files | grep html
 git ls-files | grep html
 
 # Verificar estado de GitHub Pages
-curl -I https://felirangelp.github.io/EEG_Wavelets_-_PSD/
+curl -I https://felirangelp.github.io/EEG_Wavelets_and_PSD/
 
 # Verificar dashboard específico
-curl -I https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html
+curl -I https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html
 ```
 
 ## 📞 Soporte
@@ -200,6 +200,6 @@ Mestría en Inteligencia Artificial
 
 El proyecto está completamente desplegado y accesible en:
 
-**🌐 [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)**
+**🌐 [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)**
 
 **¡Disfruta explorando el análisis de señales EEG con wavelets y PSD!** 🧠✨

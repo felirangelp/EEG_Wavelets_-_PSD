@@ -6,7 +6,7 @@
 **Autor:** Felipe Rangel  
 **Institución:** Universidad Pontificia Javeriana  
 **Repositorio:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD.git](https://github.com/felirangelp/EEG_Wavelets_-_PSD.git)  
-**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+**Dashboard Web:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 
 ## 🚀 Logros Completados
 
@@ -17,8 +17,8 @@
 - **Commits:** Historial completo con mensajes descriptivos
 
 ### ✅ **2. Dashboard Web Funcional**
-- **URL Principal:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
-- **Dashboard Directo:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html)
+- **URL Principal:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
+- **Dashboard Directo:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html)
 - **Funcionalidad:** Completa, sin instalación requerida
 - **Compatibilidad:** Todos los navegadores modernos
 
@@ -72,8 +72,8 @@
 ## 🌐 URLs de Acceso
 
 ### **Dashboard Web (Recomendado)**
-- **Principal:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
-- **Directo:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_-_PSD/dashboards/dashboard_eeg_simple.html)
+- **Principal:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
+- **Directo:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html](https://felirangelp.github.io/EEG_Wavelets_and_PSD/dashboards/dashboard_eeg_simple.html)
 
 ### **Repositorio GitHub**
 - **Código:** [https://github.com/felirangelp/EEG_Wavelets_-_PSD](https://github.com/felirangelp/EEG_Wavelets_-_PSD)
@@ -122,7 +122,7 @@
 ## 🚀 Instrucciones de Uso
 
 ### **Opción 1: Dashboard Web (Más Fácil)**
-1. **Ir a:** [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)
+1. **Ir a:** [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)
 2. **Esperar redirección automática** (3 segundos)
 3. **Usar dashboard** inmediatamente
 
@@ -221,7 +221,7 @@
 
 **El proyecto está 100% funcional y accesible en:**
 
-**🌐 [https://felirangelp.github.io/EEG_Wavelets_-_PSD/](https://felirangelp.github.io/EEG_Wavelets_-_PSD/)**
+**🌐 [https://felirangelp.github.io/EEG_Wavelets_and_PSD/](https://felirangelp.github.io/EEG_Wavelets_and_PSD/)**
 
 **📁 [https://github.com/felirangelp/EEG_Wavelets_-_PSD](https://github.com/felirangelp/EEG_Wavelets_-_PSD)**
 
