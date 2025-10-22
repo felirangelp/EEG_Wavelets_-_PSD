@@ -74,9 +74,14 @@ python src/eeg_analysis.py
 │   ├── Transformada Wavelet y PSD en EEG.md  # Tarea original
 │   ├── DOCUMENTACION_TECNICA.md          # Documentación técnica detallada
 │   ├── DOCUMENTACION_FINAL_ORGANIZADA.md # Organización del proyecto
+│   ├── PROYECTO_FINAL.md                 # Resumen final del proyecto
+│   ├── PROYECTO_PUBLICADO_GITHUB.md      # Documentación del proyecto publicado
+│   ├── GUIA_IMPLEMENTACION_COMPLETA.md   # Guía paso a paso detallada
+│   ├── CONFIGURACION_GITHUB_PAGES.md     # Configuración de GitHub Pages
+│   ├── PREVENCION_ERROR_404.md           # Prevención de errores comunes
+│   ├── INDICE_DOCUMENTACION.md           # Índice de documentación
 │   ├── documentacion.html                # Documentación HTML estática
-│   ├── project_config.ini               # Configuración del proyecto
-│   └── INDICE_DOCUMENTACION.md           # Índice de documentación
+│   └── project_config.ini               # Configuración del proyecto
 └── 📁 venv_eeg/                          # Ambiente virtual Python
 ```
 
@@ -182,6 +187,13 @@ Para la señal sEEG con wavelet db4 y 6 niveles:
 - **📄 Organización del Proyecto**: `docs/DOCUMENTACION_FINAL_ORGANIZADA.md`
 - **📄 Índice de Documentación**: `docs/INDICE_DOCUMENTACION.md`
 - **📄 Configuración**: `docs/project_config.ini`
+
+### 📄 Guías de Implementación
+- **📄 Guía Completa**: `docs/GUIA_IMPLEMENTACION_COMPLETA.md`
+- **📄 GitHub Pages**: `docs/CONFIGURACION_GITHUB_PAGES.md`
+- **📄 Prevención Errores**: `docs/PREVENCION_ERROR_404.md`
+- **📄 Proyecto Final**: `docs/PROYECTO_FINAL.md`
+- **📄 Proyecto Publicado**: `docs/PROYECTO_PUBLICADO_GITHUB.md`
 
 ### 📄 Documentación HTML
 - **📄 Documentación Estática**: `docs/documentacion.html`

@@ -17,7 +17,14 @@
 ### 📄 Documentación Específica
 - **[Transformada Wavelet y PSD en EEG.md](Transformada%20Wavelet%20y%20PSD%20en%20EEG.md)** - Tarea original del proyecto
 - **[DOCUMENTACION_FINAL_ORGANIZADA.md](DOCUMENTACION_FINAL_ORGANIZADA.md)** - Organización y estructura del proyecto
+- **[PROYECTO_FINAL.md](PROYECTO_FINAL.md)** - Resumen final del proyecto organizado
+- **[PROYECTO_PUBLICADO_GITHUB.md](PROYECTO_PUBLICADO_GITHUB.md)** - Documentación del proyecto publicado
 - **[project_config.ini](project_config.ini)** - Configuración técnica del proyecto
+
+### 📄 Guías de Implementación
+- **[GUIA_IMPLEMENTACION_COMPLETA.md](GUIA_IMPLEMENTACION_COMPLETA.md)** - Guía paso a paso detallada
+- **[CONFIGURACION_GITHUB_PAGES.md](CONFIGURACION_GITHUB_PAGES.md)** - Configuración de GitHub Pages
+- **[PREVENCION_ERROR_404.md](PREVENCION_ERROR_404.md)** - Prevención de errores comunes
 
 ### 📄 Documentación HTML
 - **[documentacion.html](documentacion.html)** - Documentación estática en formato HTML
