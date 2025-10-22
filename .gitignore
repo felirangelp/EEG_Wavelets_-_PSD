@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv_eeg/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# IMPORTANTE: NO ignorar archivos HTML del dashboard
+# Los siguientes archivos DEBEN estar en el repositorio para GitHub Pages:
+# - dashboards/dashboard_eeg_simple.html
+# - dashboards/sEEG_analysis.html
+# - dashboards/documentacion.html
+
+# Solo ignorar archivos HTML temporales o de prueba
+# *.html  # COMENTADO - No ignorar archivos HTML del proyecto

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Análisis EEG con Wavelets y PSD</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2E86AB;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2E86AB;
+            border-bottom: 2px solid #2E86AB;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2E86AB;
+            margin-top: 30px;
+        }
+        h4 {
+            color: #495057;
+            margin-top: 20px;
+        }
+        .section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2E86AB;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #dee2e6;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .success-box {
+            background-color: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #28a745;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Documentación del Proyecto</h1>
+        <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px;">
+            Transformada Wavelet Discreta y Estimación de Densidad Espectral de Potencia en EEG
+        </p>
+
+        <!-- Punto 1: Transformada Wavelet Discreta -->
+        <div class="section">
+            <h3>1️⃣ Transformada Wavelet Discreta con wavedec()</h3>
+            
+            <h4>🎯 Objetivo:</h4>
+            <p>Implementar la Transformada Wavelet Discreta usando la función wavedec() equivalente en Python.</p>
+            
+            <h4>✅ Implementación:</h4>
+            <ul>
+                <li>Función MATLAB: <span class="highlight">[c,l] = wavedec(x,n,wname)</span></li>
+                <li>Función Python: <span class="highlight">pywt.wavedec(signal, wavelet, level=n)</span></li>
+                <li>Wavelets disponibles: Daubechies (db4, db8), Haar, Coiflet, Biorthogonal</li>
+                <li>Niveles configurables: 3-8 niveles de descomposición</li>
+                <li>Reconstrucción por niveles usando pywt.upcoef()</li>
+            </ul>
+            
+            <h4>🔧 Código Implementado:</h4>
+            <div class="code-block">
+# Descomposición wavelet
+coeffs = pywt.wavedec(signal_data, wavelet, level=levels)
+cA = coeffs[0]  # Coeficiente de aproximación
+cD = coeffs[1:]  # Coeficientes de detalle
+
+# Reconstrucción por niveles
+recon_approx = pywt.upcoef('a', cA, wavelet, level=levels)
+for i, cD_level in enumerate(cD):
+    recon_signal = pywt.upcoef('d', cD_level, wavelet, level=i+1)
+            </div>
+            
+            <h4>📊 Resultados Obtenidos:</h4>
+            <p>Para la señal sEEG con wavelet db4 y 6 niveles:</p>
+            <ul>
+                <li><strong>D1:</strong> 89.29 Hz (Gamma alta)</li>
+                <li><strong>D2:</strong> 44.64 Hz (Gamma media)</li>
+                <li><strong>D3:</strong> 22.32 Hz (Beta alta)</li>
+                <li><strong>D4:</strong> 11.16 Hz (Alpha)</li>
+                <li><strong>D5:</strong> 5.58 Hz (Theta)</li>
+                <li><strong>D6:</strong> 2.79 Hz (Delta)</li>
+                <li><strong>A:</strong> 2.79 Hz (Delta)</li>
+            </ul>
+        </div>
+
+        <!-- Punto 2: Frecuencias Centrales -->
+        <div class="section">
+            <h3>2️⃣ Frecuencias Centrales de Cada Nivel</h3>
+            
+            <h4>🎯 Objetivo:</h4>
+            <p>Interpretar los resultados y entender cuál es la frecuencia central de cada uno de los filtros en los diferentes niveles de descomposición.</p>
+            
+            <h4>✅ Implementación:</h4>
+            <ul>
+                <li>Función MATLAB: <span class="highlight">FREQ = centfrq('wname')</span></li>
+                <li>Función Python: <span class="highlight">pywt.central_frequency(wavelet)</span></li>
+                <li>Función MATLAB: <span class="highlight">FREQ = scal2frq(A,'wname',DELTA)</span></li>
+                <li>Función Python: <span class="highlight">pywt.scale2frequency(wavelet, scale, fs)</span></li>
+            </ul>
+            
+            <h4>🔧 Código Implementado:</h4>
+            <div class="code-block">
+# Calcular frecuencia central de la wavelet madre
+central_freq = pywt.central_frequency(wavelet)
+
+# Calcular frecuencias para cada nivel
+for level in range(1, levels + 1):
+    freq = central_freq * fs / (2 ** level)
+    freqs[f'D{level}'] = freq
+
+# Frecuencia de aproximación
+freq_approx = central_freq * fs / (2 ** levels)
+freqs['A'] = freq_approx
+            </div>
+            
+            <h4>📈 Interpretación:</h4>
+            <ul>
+                <li>Cada nivel de descomposición wavelet tiene una frecuencia central característica</li>
+                <li>Las frecuencias disminuyen exponencialmente con el nivel (factor 2)</li>
+                <li>Los niveles superiores capturan información de alta frecuencia</li>
+                <li>Los niveles inferiores capturan información de baja frecuencia</li>
+                <li>El coeficiente de aproximación contiene la información de muy baja frecuencia</li>
+            </ul>
+        </div>
+
+        <!-- Punto 3: Estimación PSD con Welch -->
+        <div class="section">
+            <h3>3️⃣ Estimación de Densidad Espectral de Potencia (PSD)</h3>
+            
+            <h4>🎯 Objetivo:</h4>
+            <p>Implementar la Estimación de Densidad Espectral de Potencia (PSD) con el método pwelch. Probar diferentes ventanas y solapamiento.</p>
+            
+            <h4>✅ Implementación:</h4>
+            <ul>
+                <li>Función MATLAB: <span class="highlight">[pxx,f] = pwelch(x,window,noverlap,nfft,fs)</span></li>
+                <li>Función Python: <span class="highlight">scipy.signal.welch(x, fs, window, nperseg, noverlap)</span></li>
+                <li>Ventanas disponibles: Hann, Hamming, Blackman, Bartlett</li>
+                <li>Solapamiento configurable: 50% por defecto</li>
+                <li>Longitud de segmento automática</li>
+            </ul>
+            
+            <h4>🔧 Código Implementado:</h4>
+            <div class="code-block">
+# Parámetros por defecto
+nperseg = min(len(signal) // 4, 1024)
+noverlap = nperseg // 2
+
+# Calcular PSD con Welch
+freqs, psd = signal.welch(
+    signal_data, 
+    fs=fs, 
+    window='hann', 
+    nperseg=nperseg, 
+    noverlap=noverlap
+)
+            </div>
+            
+            <h4>📊 Ventanas Probadas:</h4>
+            <ul>
+                <li><strong>Hann:</strong> Suavizado moderado, buena resolución</li>
+                <li><strong>Hamming:</strong> Menos suavizado que Hann</li>
+                <li><strong>Blackman:</strong> Mayor suavizado, menor resolución</li>
+                <li><strong>Bartlett:</strong> Triangular, suavizado intermedio</li>
+            </ul>
+            
+            <h4>⚙️ Parámetros Configurables:</h4>
+            <ul>
+                <li><strong>Longitud de segmento (nperseg):</strong> Controla la resolución frecuencial</li>
+                <li><strong>Solapamiento (noverlap):</strong> Reduce la varianza del estimador</li>
+                <li><strong>Ventana:</strong> Afecta el suavizado y la resolución</li>
+            </ul>
+        </div>
+
+        <!-- Punto 4: Comparación con FFT -->
+        <div class="section">
+            <h3>4️⃣ Comparación PSD vs Transformada de Fourier (FFT)</h3>
+            
+            <h4>🎯 Objetivo:</h4>
+            <p>Comparar la estimación PSD con respecto a la Transformada de Fourier (FFT).</p>
+            
+            <h4>✅ Implementación:</h4>
+            <ul>
+                <li>Método Welch: <span class="highlight">scipy.signal.welch()</span></li>
+                <li>Método FFT: <span class="highlight">scipy.fft.fft()</span></li>
+                <li>Comparación visual en gráficos</li>
+                <li>Análisis de diferencias y ventajas</li>
+            </ul>
+            
+            <h4>🔧 Código Implementado:</h4>
+            <div class="code-block">
+# Método Welch
+welch_freqs, welch_psd = signal.welch(signal_data, fs=fs)
+
+# Método FFT
+fft_values = fft(signal_data)
+freqs = fftfreq(len(signal_data), 1/fs)
+psd = np.abs(fft_values) ** 2 / len(signal_data)
+
+# Solo frecuencias positivas
+positive_freqs = freqs[:len(freqs)//2]
+positive_psd = psd[:len(psd)//2]
+            </div>
+            
+            <h4>📊 Comparación de Métodos:</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Método Welch</th>
+                        <th>Método FFT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Suavizado</strong></td>
+                        <td>Alto (promediado)</td>
+                        <td>Bajo (ruidoso)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resolución</strong></td>
+                        <td>Media</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Varianza</strong></td>
+                        <td>Baja</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Uso</strong></td>
+                        <td>Análisis general</td>
+                        <td>Análisis detallado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Resumen de Implementación -->
+        <div class="success-box">
+            <h3>🎯 Resumen de Implementación</h3>
+            
+            <h4>✅ Todos los Objetivos Cumplidos:</h4>
+            <ul>
+                <li>✅ Transformada Wavelet Discreta implementada con pywt.wavedec()</li>
+                <li>✅ Frecuencias centrales calculadas con pywt.central_frequency()</li>
+                <li>✅ Estimación PSD con método Welch implementada</li>
+                <li>✅ Comparación PSD vs FFT realizada</li>
+                <li>✅ Dashboard interactivo con Plotly creado</li>
+                <li>✅ Ambiente virtual Python configurado</li>
+                <li>✅ Documentación completa generada</li>
+            </ul>
+            
+            <h4>🚀 Tecnologías Utilizadas:</h4>
+            <ul>
+                <li>Python 3.10+ como lenguaje principal</li>
+                <li>PyWavelets para transformada wavelet</li>
+                <li>SciPy para procesamiento de señales</li>
+                <li>Plotly para visualizaciones interactivas</li>
+                <li>Dash para dashboard web</li>
+                <li>NumPy para operaciones numéricas</li>
+            </ul>
+            
+            <h4>📁 Archivos del Proyecto:</h4>
+            <ul>
+                <li><strong>eeg_analysis.py</strong> - Análisis principal</li>
+                <li><strong>eeg_dashboard.py</strong> - Dashboard interactivo</li>
+                <li><strong>eeg_dashboard_simple.py</strong> - Dashboard simplificado</li>
+                <li><strong>requirements.txt</strong> - Dependencias</li>
+                <li><strong>run_analysis.sh</strong> - Script de ejecución</li>
+                <li><strong>README.md</strong> - Documentación completa</li>
+                <li><strong>sEEG_analysis.html</strong> - Resultados HTML</li>
+                <li><strong>documentacion.html</strong> - Esta documentación</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #e9ecef; border-radius: 10px;">
+            <h3>🎉 ¡Proyecto Completado Exitosamente!</h3>
+            <p style="font-size: 18px; margin: 0;">
+                Todos los objetivos del proyecto han sido implementados y documentados completamente.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

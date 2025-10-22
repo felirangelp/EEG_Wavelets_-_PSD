@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 EEG Wavelets y PSD - Dashboard Interactivo</title>
+    <meta name="description" content="Análisis de Señales EEG usando Transformada Wavelet Discreta y Estimación de Densidad Espectral de Potencia">
+    <meta name="author" content="Felipe Rangel - Universidad Pontificia Javeriana">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2E86AB, #A23B72);
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .author-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .author-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .author-info p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        
+        .dashboard-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dashboard-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .feature h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .feature p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .github-link {
+            margin-top: 30px;
+        }
+        
+        .github-link a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .github-link a:hover {
+            opacity: 1;
+        }
+        
+        .loading {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .dashboard-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 EEG Wavelets y PSD</h1>
+        <p class="subtitle">Análisis de Señales EEG usando Transformada Wavelet Discreta y Estimación de Densidad Espectral de Potencia</p>
+        
+        <div class="author-info">
+            <h3>👨‍💻 Felipe Rangel</h3>
+            <p>Procesamiento de señales Biológicas</p>
+            <p>Universidad Pontificia Javeriana</p>
+            <p>Mestría en Inteligencia Artificial</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h4>🌊 Transformada Wavelet</h4>
+                <p>Análisis tiempo-frecuencia con PyWavelets</p>
+            </div>
+            <div class="feature">
+                <h4>📊 Estimación PSD</h4>
+                <p>Método Welch y comparación con FFT</p>
+            </div>
+            <div class="feature">
+                <h4>📈 Dashboard Interactivo</h4>
+                <p>Visualizaciones con Plotly.js</p>
+            </div>
+            <div class="feature">
+                <h4>📚 Documentación Completa</h4>
+                <p>Guías paso a paso incluidas</p>
+            </div>
+        </div>
+        
+        <a href="dashboards/dashboard_eeg_simple.html" class="dashboard-button">
+            🚀 Abrir Dashboard Interactivo
+        </a>
+        
+        <div class="loading">
+            <p>Redirigiendo automáticamente...</p>
+            <p>Si no eres redirigido, haz clic en el botón de arriba</p>
+        </div>
+        
+        <div class="github-link">
+            <p>
+                📁 <a href="https://github.com/felirangelp/EEG_Wavelets_-_PSD" target="_blank">Ver código fuente en GitHub</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Redirección automática después de 3 segundos
+        setTimeout(function() {
+            window.location.href = 'dashboards/dashboard_eeg_simple.html';
+        }, 3000);
+        
+        // Mostrar contador
+        let countdown = 3;
+        const countdownElement = document.querySelector('.loading p');
+        
+        const timer = setInterval(function() {
+            countdown--;
+            if (countdown > 0) {
+                countdownElement.textContent = `Redirigiendo automáticamente en ${countdown} segundos...`;
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
